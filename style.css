@@ -1,0 +1,55 @@
+/* ==========================================
+   ОБЩИЕ СТИЛИ (работают всегда)
+   ========================================== */
+.pomodoro-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease; /* Плавная смена фона! */
+}
+
+.timer-box {
+  border-radius: 35px;
+  padding: 30px 60px;
+  margin-bottom: 40px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  transition: background-color 0.5s, border-color 0.5s; /* Плавная смена цвета */
+}
+
+/* ==========================================
+   🔴 РЕЖИМ УЧЕБЫ (Класс .work-mode)
+   ========================================== */
+.work-mode {
+  background-image: url('./assets/tomato_bg.png'); /* Твой томатный фон */
+  background-size: cover;
+}
+.work-mode .timer-box {
+  background-color: #E54B4B; /* Красный таймер */
+  border: 5px solid #C93B3B;
+}
+.work-mode .btn {
+  background-color: #76E28D; /* Зеленые кнопки */
+  border: 3px solid #54C26B;
+}
+
+/* ==========================================
+   🟢 РЕЖИМ ПЕРЕРЫВА (Класс .break-mode)
+   ========================================== */
+.break-mode {
+  background-image: url('./assets/break_bg.png'); /* Другой фон (например, зеленый или спокойный) */
+  background-size: cover;
+
+}
+.break-mode .timer-box {
+  background-color: #76E28D; /* На перерыве таймер становится зеленым */
+  border: 5px solid #54C26B;
+}
+.break-mode .btn {
+  background-color: #E54B4B; /* А кнопки становятся красными */
+  border: 3px solid #C93B3B;
+}

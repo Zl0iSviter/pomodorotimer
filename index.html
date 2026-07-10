@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app-screen" class="pomodoro-screen work-mode">
+        <div class="timer-box">
+            <span class="timer-text">25:00</span>
+        </div>
+
+        <div class="control-panel">
+            <button class="btn btn-pause"></button>
+        </div>
+
+    </div>
+
+    <script scr="renderer.js"></script>
+  </body>
+</html>
