@@ -4,7 +4,9 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: 400,
         height: 600,
-        resizable: false
+        resizable: false,
+        frame: false,
+        useContentSize: true
     })
 
     win.loadFile('index.html')

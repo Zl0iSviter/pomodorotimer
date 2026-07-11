@@ -16,16 +16,17 @@
   </head>
   <body>
     <div id="app-screen" class="pomodoro-screen work-mode">
-        <div class="timer-box">
-            <span class="timer-text">25:00</span>
-        </div>
+
+        <span id="timer" class="timer-text">25:00</span>
 
         <div class="control-panel">
-            <button class="btn btn-pause"></button>
+            <button id="btn-start" class="btn" >start</button>
+            <button id="changer" class="btn" >rest</button>
         </div>
 
     </div>
+    
 
-    <script scr="renderer.js"></script>
+    <script src="renderer.js"></script>
   </body>
 </html>

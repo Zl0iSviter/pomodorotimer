@@ -1,55 +1,76 @@
-/* ==========================================
-   ОБЩИЕ СТИЛИ (работают всегда)
-   ========================================== */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+
 .pomodoro-screen {
-  width: 100vw;
-  height: 100vh;
+  width: 400px;  
+  height: 600px; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  transition: background 0.5s ease; /* Плавная смена фона! */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease;
+  -webkit-app-region: drag; 
+  cursor: move;
+  user-select: none;
 }
 
-.timer-box {
-  border-radius: 35px;
-  padding: 30px 60px;
-  margin-bottom: 40px;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
-  transition: background-color 0.5s, border-color 0.5s; /* Плавная смена цвета */
+.btn, #timer {
+  -webkit-app-region: no-drag; 
+  cursor: pointer; 
 }
 
-/* ==========================================
-   🔴 РЕЖИМ УЧЕБЫ (Класс .work-mode)
-   ========================================== */
 .work-mode {
-  background-image: url('./assets/tomato_bg.png'); /* Твой томатный фон */
+  background-image: url('./assets/studybg.png'); 
   background-size: cover;
 }
-.work-mode .timer-box {
-  background-color: #E54B4B; /* Красный таймер */
-  border: 5px solid #C93B3B;
-}
-.work-mode .btn {
-  background-color: #76E28D; /* Зеленые кнопки */
-  border: 3px solid #54C26B;
+
+.work-mode .timer-text {
+  -webkit-text-stroke: 2px #C93B3B; 
 }
 
-/* ==========================================
-   🟢 РЕЖИМ ПЕРЕРЫВА (Класс .break-mode)
-   ========================================== */
+
 .break-mode {
-  background-image: url('./assets/break_bg.png'); /* Другой фон (например, зеленый или спокойный) */
+  background-image: url('./assets/restbg.png'); 
   background-size: cover;
 
 }
-.break-mode .timer-box {
-  background-color: #76E28D; /* На перерыве таймер становится зеленым */
-  border: 5px solid #54C26B;
+
+.break-mode .timer-text {
+  -webkit-text-stroke: 2px #54C26B;
 }
-.break-mode .btn {
-  background-color: #E54B4B; /* А кнопки становятся красными */
-  border: 3px solid #C93B3B;
+
+@font-face {
+    font-family: 'BiryaniCustom';
+  src: url('./assets/fonts/Biryani-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DigitalNumbersCustom';
+  src: url('./assets/fonts/DigitalNumbers-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.timer-text {
+  font-family: 'DigitalNumbersCustom', monospace; 
+  color: #FFFFFF;
+  font-size: 80px;
+  margin-top: 173px;
+  transition: 0.5s ease;
+}
+.btn {
+  font-family: 'BiryaniCustom', sans-serif; 
+  color: #FFFFFF;
+  font-size: 24px;
+  border-radius: 20px;
+  width: 146px;
+  margin-top: 90px ;
+  background-color: #76E28D; 
+  border: 6px solid #54C26B;
 }
